@@ -44,13 +44,17 @@ public class Main {
         System.out.println("Total in Euros: €" + String.format("%.2f", grandTotalEuros));
 
         System.out.print("Would you like to pay in USD? (yes/no): ");
-        string convertToDollars = scanner.nextLine();
+        String convertToDollars = scanner.nextLine();
 
         if (convertToDollars.equalsIgnoreCase("yes")) {
             double exchangeRate = 1.07; // Example exchange rate
             double grandTotalDollars = grandTotalEuros * exchangeRate;
             System.out.println("Total in USD: $" + String.format("%.2f", grandTotalDollars));
         }
+
+        System.out.println("which payment method do you want to use? (paypal/credit card/Ideal)");
+        String paymentMethod = scanner.nextLine();
+        System.out.println("You have chosen to pay with " + paymentMethod + ". Thank you for your purchase!");
     }
 }
 
